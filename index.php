@@ -3,7 +3,6 @@
     $nombreMax = intval(readline("Veuillez saisir un nombre maximum :"));
     
     $nombreRandom = rand($nombreMin, $nombreMax);
-    echo $nombreRandom;
 
     $essaisMax = intval(readline("En combien d'essais voulez-vous trouver la solution ?"));
 
@@ -13,9 +12,9 @@
         $nombreSaisi = intval(readline("Nombre invalide, veuillez réessayer :"));
     }
 
-    $essais = 0;
+    $essais = 1;
 
-    for ($essais = 0; $essais <= $essaisMax; $essais++) {
+    for ($essais = 1; $essais <= $essaisMax; $essais++) {
         if ($nombreSaisi < $nombreRandom) {
             $nombreSaisi = intval(readline("Le nombre cherché est plus grand ! Essaie encore :"));
         } else if ($nombreSaisi > $nombreRandom) {
@@ -30,15 +29,3 @@
         echo "Vous avez perdu ! Le nombre mystère était $nombreRandom. Essayez encore !";
     }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
